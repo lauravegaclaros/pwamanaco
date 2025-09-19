@@ -5,9 +5,8 @@ import { provideServiceWorker } from '@angular/service-worker';
 import { isDevMode } from '@angular/core';
 
 bootstrapApplication(App, {
-  providers: [ 
-    provideServiceWorker('ngsw-worker.js', {enabled: !isDevMode(), 
-    }),
+  providers: [
+    provideServiceWorker('ngsw-worker.js', { enabled: !isDevMode() }),
   ],
-}).catch((err) => console.error(err));
+});
 
